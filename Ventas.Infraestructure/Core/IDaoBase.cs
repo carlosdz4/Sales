@@ -8,12 +8,13 @@ using Ventas.Domain.Core;
 
 namespace Ventas.Infraestructure.Core
 {
-    internal interface IDaoBase<TEntity> where TEntity : class 
+   public interface IDaoBase<TEntity> where TEntity : class 
     {
         DataResult Save(TEntity entity);
 
         List<TEntity> GetAll();
 
+        List<TEntity> GetFilterWithEntities(Func<TEntity, bool> filter);
         TEntity GetById(Func<TEntity, bool> filter);
 
         bool Exists(Func<TEntity , bool> filter);

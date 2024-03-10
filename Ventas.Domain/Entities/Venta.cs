@@ -13,10 +13,10 @@ namespace Ventas.Domain.Entities
         public string? NumeroVenta { get; set; }
         public int IdTipoDocumentoVenta { get; set; }
 
-        public virtual TipoDocumentoVenta TipoDocumentoVenta { get; set; }
+        public virtual TipoDocumentoVenta? TipoDocumentoVenta { get; set; }
         public int IdUsuario { get; set; }
 
-        public virtual  Usuario Usuario { get; set; }
+        public virtual  Usuario? Usuario { get; set; }
         public string? DocumentoCliente { get; set; }
         public string? Nombrecliente { get; set; }
 
@@ -26,7 +26,7 @@ namespace Ventas.Domain.Entities
 
         public decimal Total { get; set; }
 
-        public ICollection<Venta> Ventas { get; set; }
+        public ICollection<Venta>? Ventas { get; set; }
 
 
     }

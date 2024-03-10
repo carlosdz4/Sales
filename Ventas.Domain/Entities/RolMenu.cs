@@ -12,11 +12,11 @@ namespace Ventas.Domain.Entities
         public int Id { get; set; }
 
         public int IdRol { get; set; }
-        public Rol Rol { get; set; }
+        public Rol? Rol { get; set; }
 
         public int IdMenu { get; set; }
 
-        public Menu Menu { get; set; }
+        public Menu? Menu { get; set; }
 
 
     }

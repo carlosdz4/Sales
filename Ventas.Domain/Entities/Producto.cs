@@ -19,7 +19,7 @@ namespace Ventas.Domain.Entities
 
         public int IdCategoria { get; set; }
 
-        public Categoria Categoria { get; set; }
+        public Categoria? Categoria { get; set; }
         public int Stock { get; set; }
 
         public string? UrlImagen { get; set; }

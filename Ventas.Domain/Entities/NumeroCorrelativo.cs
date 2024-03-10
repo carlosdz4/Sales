@@ -13,7 +13,7 @@ namespace Ventas.Domain.Entities
         public int UltimoNumero { get; set; }
         public int CantidadDigitos { get; set; }
 
-        public string Gestion { get; set; }
+        public string? Gestion { get; set; }
 
         public DateTime FechaActualizaciones { get; set; }
     }

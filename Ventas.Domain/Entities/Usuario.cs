@@ -11,21 +11,21 @@ namespace Ventas.Domain.Entities
     {
 
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string correo { get; set; }
+        public string? Nombre { get; set; }
+        public string? correo { get; set; }
 
         public int Telefono { get; set; }
 
         public int IdRol { get; set; }
 
-        public virtual Rol Rol { get; set; }
+        public virtual Rol? Rol { get; set; }
 
-        public string UrlFoto { get; set; }
+        public string? UrlFoto { get; set; }
 
-        public string NombreFoto { get; set; }
+        public string? NombreFoto { get; set; }
 
-        public string Clave { get; set; }
+        public string? Clave { get; set; }
 
-        public ICollection<Venta> Ventas { get; set; }
+        public ICollection<Venta>? Ventas { get; set; }
     }
 }

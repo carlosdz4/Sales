@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Ventas.Domain.Entities;
 using Ventas.Infraestructure.Core;
+using Ventas.Infraestructure.Model;
 
 namespace Ventas.Infraestructure.Interfaces
 {
-    internal interface IVentaDB : IDaoBase<Venta>
+   public interface IVentaDB : IDaoBase<Venta>
     {
+        public ModelVendedorVentas modelVendedorVentas(int IdUsuario);
     }
 }

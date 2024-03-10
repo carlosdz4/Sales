@@ -12,6 +12,6 @@ namespace Ventas.Domain.Entities
         public int Id { get; set; }
         public string? Descripcion { get; set; }
 
-        public ICollection<Venta> Ventas { get; set; }
+        public ICollection<Venta>? Ventas { get; set; }
     }
 }
