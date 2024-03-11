@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Ventas.Infraestructure.Migrations
 {
-    public partial class first : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -274,7 +274,6 @@ namespace Ventas.Infraestructure.Migrations
                     IdTipoDocumentoVenta = table.Column<int>(type: "int", nullable: false),
                     TipoDocumentoVentaId = table.Column<int>(type: "int", nullable: true),
                     IdUsuario = table.Column<int>(type: "int", nullable: false),
-                    UsuarioId = table.Column<int>(type: "int", nullable: true),
                     DocumentoCliente = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nombrecliente = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SubTotal = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -299,10 +298,11 @@ namespace Ventas.Infraestructure.Migrations
                         principalTable: "TipoDocumentoVenta",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Venta_Usuario_UsuarioId",
-                        column: x => x.UsuarioId,
+                        name: "FK_Venta_Usuario_IdUsuario",
+                        column: x => x.IdUsuario,
                         principalTable: "Usuario",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Venta_Venta_VentaId",
                         column: x => x.VentaId,
@@ -367,14 +367,14 @@ namespace Ventas.Infraestructure.Migrations
                 column: "RolId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Venta_IdUsuario",
+                table: "Venta",
+                column: "IdUsuario");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Venta_TipoDocumentoVentaId",
                 table: "Venta",
                 column: "TipoDocumentoVentaId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Venta_UsuarioId",
-                table: "Venta",
-                column: "UsuarioId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Venta_VentaId",

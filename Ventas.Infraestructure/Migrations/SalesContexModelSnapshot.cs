@@ -593,17 +593,14 @@ namespace Ventas.Infraestructure.Migrations
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("UsuarioId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("VentaId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TipoDocumentoVentaId");
+                    b.HasIndex("IdUsuario");
 
-                    b.HasIndex("UsuarioId");
+                    b.HasIndex("TipoDocumentoVentaId");
 
                     b.HasIndex("VentaId");
 
@@ -663,13 +660,15 @@ namespace Ventas.Infraestructure.Migrations
 
             modelBuilder.Entity("Ventas.Domain.Entities.Venta", b =>
                 {
+                    b.HasOne("Ventas.Domain.Entities.Usuario", "Usuario")
+                        .WithMany("Ventas")
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Ventas.Domain.Entities.TipoDocumentoVenta", "TipoDocumentoVenta")
                         .WithMany("Ventas")
                         .HasForeignKey("TipoDocumentoVentaId");
-
-                    b.HasOne("Ventas.Domain.Entities.Usuario", "Usuario")
-                        .WithMany("Ventas")
-                        .HasForeignKey("UsuarioId");
 
                     b.HasOne("Ventas.Domain.Entities.Venta", null)
                         .WithMany("Ventas")

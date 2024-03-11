@@ -11,7 +11,7 @@ namespace Ventas.Infraestructure.Model
         //Vendedor
         //Cantidad de ventas realizadas.
 
-        public string? NombreVendedor { get; set; }
+        public string NombreVendedor { get; set; }
         public  int CantidadVenta { get; set; }
 
     }

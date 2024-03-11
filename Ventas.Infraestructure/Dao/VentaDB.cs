@@ -12,7 +12,7 @@ using Ventas.Infraestructure.Model;
 
 namespace Ventas.Infraestructure.Dao
 {
-    internal class VentaDB : daoBase<Venta>, IVentaDB
+    public class VentaDB : daoBase<Venta>, IVentaDB
     {
         private readonly SalesContex contex;
 
@@ -27,14 +27,18 @@ namespace Ventas.Infraestructure.Dao
 
             try
             {
-                var totalVentasPorVendedor = contex.Venta
+
+
+                modelVendedorVentas = contex.Venta
                     .Where(v => v.IdUsuario == IdUsuario)
-                    .GroupBy(v => v.Usuario.Nombre) 
-           .            Select(g => new ModelVendedorVentas
-                           {
-                           NombreVendedor = g.Key,
-                             CantidadVenta = g.Count()
-                            });
+                    .GroupBy(v => v.Usuario.Nombre)
+           .Select(g => new ModelVendedorVentas
+           {
+               NombreVendedor = g.Key,
+               CantidadVenta = g.Count()
+           }).First();
+
+                
             }
             catch (Exception)
             {

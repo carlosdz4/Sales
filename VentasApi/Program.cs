@@ -14,7 +14,7 @@ builder.Services.AddDbContext<SalesContex>(options => options.UseSqlServer(build
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddScoped<IProductoDB, ProductoDB>();
-
+builder.Services.AddScoped<IVentaDB, VentaDB>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

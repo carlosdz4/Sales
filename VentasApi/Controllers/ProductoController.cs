@@ -11,10 +11,12 @@ namespace VentasApi.Controllers
     public class ProductoController : Controller
     {
         private readonly IProductoDB productoDB;
+        
 
-        public ProductoController( IProductoDB productoDB )
+        public ProductoController( IProductoDB productoDB  )
         {
             this.productoDB = productoDB;
+          
         }
 
         [HttpGet]
@@ -27,6 +29,8 @@ namespace VentasApi.Controllers
             return Ok(products);
 
         }
+
+
 
     }
 }
