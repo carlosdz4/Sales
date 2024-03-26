@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Ventas.AppService.Core
 {
-    internal class ServiceResult
+    public class ServiceResult
     {
+        public ServiceResult()
+        {
+            this.Success = true;
+        }
         public string? Message { get; set; }
         public bool Success { get; set; }
         public dynamic? Data { get; set; }

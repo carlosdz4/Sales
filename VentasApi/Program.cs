@@ -3,6 +3,8 @@ using Ventas.Domain.Entities;
 using Ventas.Infraestructure.Context;
 using Ventas.Infraestructure.Dao;
 using Ventas.Infraestructure.Interfaces;
+using Ventas.IOC.NegocioDependencies;
+using Ventas.IOC.VentasDependencies;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +16,12 @@ builder.Services.AddDbContext<SalesContex>(options => options.UseSqlServer(build
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddScoped<IProductoDB, ProductoDB>();
-builder.Services.AddScoped<IVentaDB, VentaDB>();
+
+builder.Services.AddNegocioDependecy();
+builder.Services.AddVentasDependency();
+
+//builder.Services.AddScoped<IVentaDB, VentaDB>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

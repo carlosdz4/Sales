@@ -17,6 +17,7 @@ namespace Ventas.Infraestructure.Core
         List<TEntity> GetFilterWithEntities(Func<TEntity, bool> filter);
         TEntity GetById(Func<TEntity, bool> filter);
 
+        int Commit();
         bool Exists(Func<TEntity , bool> filter);
     }
     

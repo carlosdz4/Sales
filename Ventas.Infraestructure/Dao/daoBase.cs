@@ -51,9 +51,16 @@ namespace Ventas.Infraestructure.Dao
             DataResult result = new DataResult();
             this.entities.Add(entity);
             result.Success = true;
+
+            this.Commit();
             return result;
         }
 
-        
+        public int Commit()
+        {
+           return this.contex.SaveChanges();
+        }
+
+
     }
 }

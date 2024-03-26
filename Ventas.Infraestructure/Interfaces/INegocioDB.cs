@@ -8,7 +8,7 @@ using Ventas.Infraestructure.Core;
 
 namespace Ventas.Infraestructure.Interfaces
 {
-    internal interface INegocioDB : IDaoBase<Negocio>
+    public interface INegocioDB : IDaoBase<Negocio>
     {
     }
 }

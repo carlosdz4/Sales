@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ventas.Infraestructure.Exceptions
 {
-    internal class NegocioException : Exception
+    public class NegocioException : Exception
     {
 
         public NegocioException(string message) : base(message) 

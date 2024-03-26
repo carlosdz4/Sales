@@ -21,6 +21,11 @@ namespace Ventas.Infraestructure.Dao
             this.contex = contex;
         }
 
+        public  override List<Venta> GetAll()
+        {
+           return contex.Venta.ToList();
+        }
+
         public ModelVendedorVentas modelVendedorVentas(int IdUsuario)
         {
             ModelVendedorVentas modelVendedorVentas = new ModelVendedorVentas();

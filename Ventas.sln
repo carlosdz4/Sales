@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ventas.AppService", "Ventas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ventas.Infraestructure", "Ventas.Infraestructure\Ventas.Infraestructure.csproj", "{78687436-F4A3-4121-924A-23952902CE37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentasApi", "VentasApi\VentasApi.csproj", "{FE4B16B1-6506-42C3-A473-6ED145F8BB81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VentasApi", "VentasApi\VentasApi.csproj", "{FE4B16B1-6506-42C3-A473-6ED145F8BB81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ventas.Modeling", "Ventas.Modeling\Ventas.Modeling.csproj", "{325004A2-5168-46E6-909D-7B6839363E30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventas.IOC", "Ventas.IOC\Ventas.IOC.csproj", "{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{FE4B16B1-6506-42C3-A473-6ED145F8BB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE4B16B1-6506-42C3-A473-6ED145F8BB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE4B16B1-6506-42C3-A473-6ED145F8BB81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325004A2-5168-46E6-909D-7B6839363E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325004A2-5168-46E6-909D-7B6839363E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325004A2-5168-46E6-909D-7B6839363E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325004A2-5168-46E6-909D-7B6839363E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
