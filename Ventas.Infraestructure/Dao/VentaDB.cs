@@ -21,6 +21,20 @@ namespace Ventas.Infraestructure.Dao
             this.contex = contex;
         }
 
+        public override DataResult Save(Venta entity)
+        {
+
+           //var venta = (from ve in contex.Venta
+           //             join us in contex.Usuario on ve.IdUsuario equals us.Id
+           //             join td in contex.TipoDocumentoVenta on ve.IdTipoDocumentoVenta equals td.Id
+           //             select new Venta
+           //             {
+                            
+           //             }).ToList();
+
+            return base.Save(entity);
+        }
+
         public  override List<Venta> GetAll()
         {
            return contex.Venta.ToList();

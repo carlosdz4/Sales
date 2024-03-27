@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VentasApi", "VentasApi\Vent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ventas.Modeling", "Ventas.Modeling\Ventas.Modeling.csproj", "{325004A2-5168-46E6-909D-7B6839363E30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventas.IOC", "Ventas.IOC\Ventas.IOC.csproj", "{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ventas.IOC", "Ventas.IOC\Ventas.IOC.csproj", "{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaWeb", "VentaWeb\VentaWeb.csproj", "{C9818FC7-4066-405A-88F0-EE4E889D53A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A282F5D-71CC-4F0D-B044-EBB69C45A15C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9818FC7-4066-405A-88F0-EE4E889D53A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9818FC7-4066-405A-88F0-EE4E889D53A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9818FC7-4066-405A-88F0-EE4E889D53A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9818FC7-4066-405A-88F0-EE4E889D53A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

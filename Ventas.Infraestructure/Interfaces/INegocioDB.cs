@@ -10,5 +10,6 @@ namespace Ventas.Infraestructure.Interfaces
 {
     public interface INegocioDB : IDaoBase<Negocio>
     {
+        Negocio ObtenerNegocio(string  nombre);
     }
 }

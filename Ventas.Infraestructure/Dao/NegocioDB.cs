@@ -28,7 +28,7 @@ namespace Ventas.Infraestructure.Dao
 
         public override List<Negocio> GetAll()
         {
-            return base.GetFilterWithEntities(x => !x.Eliminado);
+            return base.GetFilterWithEntities(x => x.Eliminado == false);
         }
 
         public override DataResult Save(Negocio entity)
@@ -61,6 +61,14 @@ namespace Ventas.Infraestructure.Dao
             
 
             return  result;
+        }
+
+        public Negocio ObtenerNegocio(string nombre)
+        {
+
+
+            return base.GetById(x => x.Nombre.Equals(nombre));
+
         }
     }
 }

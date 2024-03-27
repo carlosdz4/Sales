@@ -8,6 +8,7 @@ namespace Ventas.AppService.Models
 {
     public class VentaModel
     {
+        public int Id { get; set; }
         public string? NumeroVenta { get; set; }
         public int IdTipoDocumentoVenta { get; set; }
 

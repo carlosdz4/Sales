@@ -40,15 +40,7 @@ namespace Ventas.Infraestructure.Dao
                                 NombreCategoria = ca.Descripcion
                             }).ToList();
 
-                //products = contex.Producto.Where(po => !po.Eliminado).Join(contex.Categoria.Where(ca => !ca.Eliminado),
-                //    po => po.IdCategoria, ca => ca.Id, (po, ca) => new ModelProducto
-                //    {
-                //        Id = po.Id,
-                //        CodigoBarra = po.CodigoBarra,
-                //        Marca = po.Marca,
-                //        NombreCategoria = ca.Descripcion
-
-                //    }).ToList();
+                
             }
             catch (Exception ex)
             {

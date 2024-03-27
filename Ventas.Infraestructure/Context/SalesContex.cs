@@ -29,15 +29,7 @@ namespace Ventas.Infraestructure.Context
        .WithMany(td => td.Ventas)
        .HasForeignKey(v => v.IdTipoDocumentoVenta);
 
-            var dateTimeProperties = modelBuilder.Model.GetEntityTypes()
-        .SelectMany(entityType => entityType.GetProperties())
-        .Where(property => property.ClrType == typeof(DateTime) || property.ClrType == typeof(DateTime?));
-
-            // Configurar el tipo de columna datetime2 para todas las propiedades DateTime
-            foreach (var property in dateTimeProperties)
-            {
-                property.SetColumnType("datetime");
-            }
+           
         }
 
 

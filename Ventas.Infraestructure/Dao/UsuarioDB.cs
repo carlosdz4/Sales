@@ -10,7 +10,7 @@ using Ventas.Infraestructure.Interfaces;
 
 namespace Ventas.Infraestructure.Dao
 {
-    internal class UsuarioDB : daoBase<Usuario>, IUsuarioDB
+    public class UsuarioDB : daoBase<Usuario>, IUsuarioDB
     {
         private readonly SalesContex contex;
 

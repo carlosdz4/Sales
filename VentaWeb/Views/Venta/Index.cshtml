@@ -1,0 +1,83 @@
+﻿@model IEnumerable<VentaWeb.Models.VentaModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numeroVenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.documentoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombrecliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.impuestoTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idUsuarioCreacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numeroVenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.documentoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombrecliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.impuestoTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idUsuarioCreacion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { search = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

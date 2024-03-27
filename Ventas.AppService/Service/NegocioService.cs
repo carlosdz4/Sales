@@ -39,6 +39,7 @@ namespace Ventas.AppService.Service
                     Telefono = negocioAddDto.Telefono,
                     UrlLogo = negocioAddDto.UrlLogo,
                     PorcentajeImpuesto = negocioAddDto.PorcentajeImpuesto,
+                    SimboloMoneda = negocioAddDto.SimboloMoneda
 
 
                 });
@@ -70,7 +71,7 @@ namespace Ventas.AppService.Service
             try
             {
                 var query = (from ne in negocioDB.GetAll()
-                             where ne.Eliminado != false
+                             
                              select new Models.NegocioModel
                              {
                                  Correo = ne.Correo,
@@ -82,7 +83,7 @@ namespace Ventas.AppService.Service
                                  SimboloMoneda = ne.SimboloMoneda,
                                  Telefono = ne.Telefono,
                                  UrlLogo = ne.UrlLogo,
-
+                                 
 
 
                              }).ToList();
@@ -101,9 +102,28 @@ namespace Ventas.AppService.Service
             
         }
 
-        public Task<ServiceResult> GetNegocioByName(string name)
+        public async Task<ServiceResult> GetNegocioByName(string name)
         {
-            throw new NotImplementedException();
+
+            ServiceResult result = new ServiceResult();
+
+            
+
+            try
+            {
+                var query = negocioDB.GetById(x => x.Nombre.Equals(name));
+
+                result.Data = query;
+                result.Success = true;
+            }
+            catch (Exception ex)
+            {
+                result.Success=false;
+                this.logger.LogError($"Error: {ex.Message}", ex.ToString());
+            }
+
+            return result;
+
         }
     }
 }

@@ -8,7 +8,7 @@ using Ventas.Infraestructure.Core;
 
 namespace Ventas.Infraestructure.Interfaces
 {
-    internal interface IUsuarioDB : IDaoBase<Usuario>
+    public interface IUsuarioDB : IDaoBase<Usuario>
     {
     }
 }

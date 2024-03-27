@@ -30,6 +30,17 @@ namespace VentasApi.Controllers
             return Ok(result);
         }
 
+        [HttpPost("GetNegocioByName")]
+
+        public async Task<IActionResult> GetNegocioByName([FromBody] string name)
+        {
+            var result = await negocioService.GetNegocioByName(name);
+
+            if (!result.Success) { return BadRequest(); }
+            
+            return Ok(result);
+        }
+
         [HttpPost("AddNegocio")]
 
         public async Task<IActionResult> AddNegocio([FromBody] NegocioModel  negocioModel)

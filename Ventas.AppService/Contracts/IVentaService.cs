@@ -12,7 +12,7 @@ namespace Ventas.AppService.Contracts
     {
 
         public Task<ServiceResult> GetVentas();
-        public Task<ServiceResult> GetVentasByName(string name);
+        public Task<ServiceResult> GetVentasById(int id);
         public Task<ServiceResult> AddVentas(VentasAddDto ventasAddDto);
     }
 }
